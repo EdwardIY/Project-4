@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ * {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+ }
+
+ body {
+  background-color: black;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+ }
+
+.App {
+  width: 55vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.App h1 {
+  font-weight: 400;
+  color: white;
+  opacity: .8;
+}
+
+.editTodo {
+  margin-top: 50px;
+}
+
+.addTaskContainer,
+.editTodoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:20px;
+  color: white;
+}
+
+
+input {
+  all:initial;
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  padding: .5em 0em;
+  padding-left: .5em;
+  border-radius: 7px;
+  font-size: 18px;
+  font-family: inherit;
+  margin-top: 10px;
+}
+
+.addTaskContainer div{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap:20px;
+  opacity: .6;
+}
+.editTodoContainer{
+  margin-bottom: 20vh;
+}
+.editTodoContainer div  {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap:20px;
+}
+
+.editTodoContainer div span {
+  opacity: .6;
+}
+
+.addTaskContainer div:hover,
+.editTodoContainer div span:hover{
+  opacity: 1;
+}
+
+ul {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+ h2,h3 {
+  font-weight: 100;
+  color: white;
+}
+.task {
+  background-color: white;
+  padding: .7em .6em;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  border-radius: 7px;
+}
+
+.taskText {
+  font-weight: 800;
+  font-style: italic;
+  color: Navy;
+}
+
+.task div {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:35px;
+}
+
+.task div span {
+  cursor: pointer;
+}
+
+select {
+  outline: none;
+  padding: .5em;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+option {
+  border-radius: 0px;
+  padding: 1em;
+  font-size: 17px;
+}
+
+@media(max-width:960px){
+  .App {
+    width: 70vw;
+  }
+}
+
+@media(max-width:960px){
+  .task {
+    flex-direction: column;
+    gap:10px;
+  }
+  .task div {
+  }
+
+  .taskText {
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;  }
+}
+
+@media(max-width:500px){
+  input {
+    width: 120%;
+  }
+
+  .addTaskContainer,
+  .editTodoContainer{
+    flex-direction: column;
+    margin-bottom: 10vh;
+  }
+
+}
