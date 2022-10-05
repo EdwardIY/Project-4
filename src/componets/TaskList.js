@@ -22,7 +22,9 @@ function TaskList() {
     const [edit, makeEdit] = useState("")
 
     // ADD A TASK
-    function addTask (task) {
+    function addTask (e,task) {
+        console.log(e)
+        e.preventDefault()
         const newTask =  {
             id: Math.floor(Math.random()*100000),
             body: task,
