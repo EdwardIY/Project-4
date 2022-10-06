@@ -60,9 +60,7 @@ input {
   gap:20px;
   opacity: .6;
 }
-.editTodoContainer{
-  margin-bottom: 20vh;
-}
+
 .editTodoContainer div  {
   cursor: pointer;
   display: flex;
@@ -70,12 +68,18 @@ input {
   gap:20px;
 }
 
-.editTodoContainer div span {
+.editTodoContainer div span,
+.editTodoContainer div button {
+  all :initial;
+  font-family: inherit;
+  color: white;
   opacity: .6;
+  cursor: pointer;
 }
 
 .addTaskContainer button:hover,
-.editTodoContainer div span:hover{
+.editTodoContainer div span:hover,
+.editTodoContainer div button:hover{
   opacity: 1;
 }
 

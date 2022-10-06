@@ -67,7 +67,8 @@ function TaskList() {
         } 
     }
     // EDIT TODO
-    function updateTodo(updatedTodo) {
+    function updateTodo(e, updatedTodo) {
+        e.preventDefault()
         if(edit) {
             setTasks_S([...getTasks_S().map((x)=> {
                 if(x.id == edit) x.body = updatedTodo;
@@ -84,12 +85,12 @@ function TaskList() {
     <>
     <NewTask addTask={addTask} />
     <Filter filter = {filter} />
+    { edit && <EditTodo updateTodo = {updateTodo} makeEdit = {makeEdit}  />}
     {tasks.length === 0 && !filteredTasks ? <div style={{color: "white", marginTop: "20px"}}> Nothing to do.. </div> : ""}
 
     {tasks.length > 0 && !filteredTasks ? <MakeList data = {tasks} delTask = {delTask} completed = {completed} makeEdit = {makeEdit} cat = {"All Tasks"}/> : ""}    
     {filteredTasks.length > 0 ? <MakeList data = {filteredTasks} delTask = {delTask} completed = {completed} makeEdit = {makeEdit} cat = {tasksCategory}/> : ""}    
     {filteredTasks && filteredTasks.length === 0 ? <MakeList data = {filteredTasks} makeEdit = {makeEdit}  cat = {tasksCategory}/>: "" }
-    { edit && <EditTodo updateTodo = {updateTodo} makeEdit = {makeEdit}  />}
     </>
 )
     

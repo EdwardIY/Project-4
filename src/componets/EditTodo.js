@@ -4,16 +4,16 @@ function EditTodo({updateTodo, makeEdit}) {
     const [todo, setTodo] = useState("")
 
     return (
-        <section className = "editTodo">
+        <form className = "editTodo" onSubmit={(e)=> updateTodo(e,todo) }>
             <h3>Update Todo</h3>
             <div className="editTodoContainer">
-            <input placeholder="Enter in new value" type="text" onChange={(e)=> setTodo(e.target.value)}></input>
+            <input required placeholder="Enter in new value" type="text" onChange={(e)=> setTodo(e.target.value)}></input>
                 <div>
-                    <span onClick={()=> updateTodo(todo)}>Save</span>
+                    <button onClick={()=> updateTodo(todo)}>Save</button>
                     <span onClick={()=> makeEdit("") }>Cancel</span>
                 </div>
             </div>
-        </section>
+        </form>
     )
 }
 export default EditTodo
