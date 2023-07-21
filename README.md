@@ -11,4 +11,4 @@ a seamless and smooth UI.
 - and man more.
 
 ## Technology used
-- React.js / Typescript / CSS / Local Storage
+- React.js / CSS / Local Storage
